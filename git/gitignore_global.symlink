@@ -1,0 +1,14 @@
+*~
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.AppleDouble
+.LSOverride
+Icon
+
+# Thumbnails
+._*
+
+# project-specific vim configurations
+.vimrc.local

@@ -1,0 +1,18 @@
+#!/bin/bash
+# sourced by .bashrc
+
+# enable color support
+alias ls='ls -G'
+
+# some more ls aliases
+alias l.='ls -d .*'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias httpserver='python -m http.server'
+alias vi=vim
+alias pgrep='ps -eo "%p %c %U %C" | grep'
+alias nano='nano -m'
+
+alias elasticsearch=~/Development/elasticsearch-1.5.2/bin/elasticsearch

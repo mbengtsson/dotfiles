@@ -1,0 +1,43 @@
+# .bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+shopt -s cdspell                 # autocorrects cd misspellings
+shopt -s histappend              # append to (not overwrite) the history file
+shopt -s checkwinsize            # update the value of LINES and COLUMNS after each command if altered
+shopt -s no_empty_cmd_completion # No empty completion
+shopt -s cmdhist                 # save multi-line commands in history as single line
+shopt -s dotglob                 # include dotfiles in pathname expansion
+shopt -s expand_aliases          # expand aliases
+shopt -s extglob                 # enable extended pattern-matching features
+shopt -s nocaseglob              # pathname expansion will be treated as case-insensitive
+
+export HISTIGNORE="&:ls:ll:la:cd:exit:clear"
+export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
+export HISTFILESIZE=${HISTSIZE}
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# prompt
+# PROMPT_DIRTRIM=3
+GIT_PS1_SHOWDIRTYSTATE=true
+PS1='\[\e[0;92m\]┌[\u@\h] \[\e[0;94m\][\w]$(__git_ps1 " \[\e[0;95m\][%s]")\n\[\e[0;92m\]└─>\$ \[\e[0m\]'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# source separate aliases, functions and exports files
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
+[ -f ~/.bash_functions ] && . ~/.bash_functions
+[ -f ~/.bash_exports ] &&  . ~/.bash_exports
+
+# source git prompt and autocomplete files
+[ -f ~/.git-prompt.sh ] && . ~/.git-prompt.sh
+[ -f ~/.git-completion.sh ] && . ~/.git-completion.sh
+
+# Load archey
+# archey -c

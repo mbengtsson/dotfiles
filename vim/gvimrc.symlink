@@ -1,0 +1,8 @@
+set vb
+set lines=30
+set columns=120
+set guioptions-=T
+set guioptions+=c
+
+set background=dark
+colorscheme darkspectrum 

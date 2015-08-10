@@ -1,0 +1,55 @@
+" load plugins from vundle
+source ~/.vim/plugins.vim
+
+let g:airline_powerline_fonts = 1
+
+set guifont=Inconsolata\ for\ Powerline:h16   " set font
+set encoding=utf8                             " set encoding to utf8
+set ruler                                     " display cursor position in status bar
+set laststatus=2                              " show the status line all the time
+set title                                     " show file-name in title
+set hlsearch                                  " highlight all search-hits
+set incsearch                                 " incremental searches
+set showcmd                                   " show the input of an *incomplete* command
+set tabstop=4                                 " size of hard tabstop
+set expandtab                                 " always use spaces instead of tab characters
+set shiftwidth=4                              " size of an indent
+set autoindent                                " automatic indentation of new lines
+set number                                    " display line numbers
+set nowrap                                    " no line-breaking
+set wildmenu                                  " show possible completions of command line commands, file names, and more.
+set clipboard=unnamed                         " sets clipboard to os default
+set scrolloff=3                               " lines of text around cursor
+set ttyfast                                   " faster redrawing
+set visualbell                                " visual bell effect rather than beeping
+set noerrorbells                              " turn off bell
+
+"Colour-theme settings
+set background=dark
+color darkspectrum 
+syntax on
+
+vnoremap . :normal .<cr>
+
+"Mappings
+map<C-n> :NERDTreeToggle<CR>
+map<C-u> :GundoToggle<CR>
+map<C-p> :ctrlp_map<CR>
+map'CtrlP' :ctrlp_cmd<CR>
+
+"NERDtree stuff
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close NERDtree if it is the last window
+
+"CtrlP stuff
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+"DelimitMate stuff
+let g:delimitMate_expand_cr = 2
+
+"indentLine stuff
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '│'
+
