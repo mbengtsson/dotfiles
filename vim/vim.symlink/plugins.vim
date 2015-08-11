@@ -41,6 +41,9 @@ Plugin 'sjl/gundo.vim'
 " NERDTREE https://github.com/scrooloose/nerdtree
 Plugin 'scrooloose/nerdtree'
 
+" NERDTREE-GIT-PLUGIN https://github.com/Xuyuanp/nerdtree-git-plugin
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
 " SYNTASTIC https://github.com/scrooloose/syntastic
 Plugin 'scrooloose/syntastic'
 
