@@ -26,7 +26,7 @@ set noerrorbells                              " turn off bell
 
 "Colour-theme settings
 set background=dark
-color darkspectrum 
+colorscheme darkspectrum
 syntax on
 
 vnoremap . :normal .<cr>
@@ -36,6 +36,7 @@ map<C-n> :NERDTreeToggle<CR>
 map<C-u> :GundoToggle<CR>
 map<C-p> :ctrlp_map<CR>
 map'CtrlP' :ctrlp_cmd<CR>
+let mapleader=","     " maps leader to comma (,)
 
 "NERDtree stuff
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close NERDtree if it is the last window
