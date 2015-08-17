@@ -14,5 +14,8 @@ export LESS_TERMCAP_so=$'\E[1;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[1;32m'
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+if [ -f "/usr/libexec/java_home -v 1.8" ]; then
+    export JAVA_HOME="/usr/libexec/java_home -v 1.8";
+fi
+
 export ANDROID_HOME=/usr/local/opt/android-sdk

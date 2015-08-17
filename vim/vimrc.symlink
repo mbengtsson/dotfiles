@@ -11,7 +11,7 @@ set scrolloff=3                               " lines of text around cursor
 let g:airline_powerline_fonts = 1
 
 " Fonts and encoding
-set guifont=Inconsolata\ for\ Powerline:h16   " set font
+set guifont=Inconsolata\ for\ Powerline       " set font
 set encoding=utf8                             " set encoding to utf8
 
 " Tabs-stop
@@ -63,7 +63,7 @@ let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
 
 " Backups
-set backup
+:set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
