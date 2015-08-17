@@ -17,3 +17,5 @@ brew install nmap
 brew install openssl
 brew install scala
 brew install youtube-dl
+brew install unrar
+brew install p7zip

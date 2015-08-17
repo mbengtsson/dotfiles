@@ -1,35 +1,42 @@
 " load plugins from vundle
-source ~/.vim/plugins.vim
+source ~/.vim/plugins.vim                     " Load plugins
 
+set clipboard=unnamed                         " sets clipboard to os default
+
+" Theme settings
+set background=dark                           " Dark background
+colorscheme darkspectrum                      " Colour theme
+syntax on                                     " Syntax highlighting
+set scrolloff=3                               " lines of text around cursor
 let g:airline_powerline_fonts = 1
 
+" Fonts and encoding
 set guifont=Inconsolata\ for\ Powerline:h16   " set font
 set encoding=utf8                             " set encoding to utf8
-set ruler                                     " display cursor position in status bar
-set laststatus=2                              " show the status line all the time
-set title                                     " show file-name in title
-set hlsearch                                  " highlight all search-hits
-set incsearch                                 " incremental searches
-set showcmd                                   " show the input of an *incomplete* command
+
+" Tabs-stop
 set tabstop=4                                 " size of hard tabstop
 set expandtab                                 " always use spaces instead of tab characters
 set shiftwidth=4                              " size of an indent
 set autoindent                                " automatic indentation of new lines
+
+" UI config
 set number                                    " display line numbers
-set nowrap                                    " no line-breaking
+set showcmd                                   " show the input of an *incomplete* command
 set wildmenu                                  " show possible completions of command line commands, file names, and more.
-set clipboard=unnamed                         " sets clipboard to os default
-set scrolloff=3                               " lines of text around cursor
-set ttyfast                                   " faster redrawing
+set title                                     " show file-name in title
+set ruler                                     " display cursor position in status bar
+set laststatus=2                              " show the status line all the time
+set nowrap                                    " no line-breaking
 set visualbell                                " visual bell effect rather than beeping
 set noerrorbells                              " turn off bell
+set ttyfast                                   " faster redrawing
+set lazyredraw                                " redraw only when needed to
+set showmatch                                 " highlight matching [{()}]
 
-"Colour-theme settings
-set background=dark
-colorscheme darkspectrum
-syntax on
-
-vnoremap . :normal .<cr>
+" Searching
+set hlsearch                                  " highlight all search-hits
+set incsearch                                 " incremental searches
 
 "Mappings
 map<C-n> :NERDTreeToggle<CR>
@@ -37,6 +44,7 @@ map<C-u> :GundoToggle<CR>
 map<C-p> :ctrlp_map<CR>
 map'CtrlP' :ctrlp_cmd<CR>
 let mapleader=","     " maps leader to comma (,)
+vnoremap . :normal .<cr>
 
 "NERDtree stuff
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close NERDtree if it is the last window
@@ -53,4 +61,11 @@ let g:delimitMate_expand_cr = 2
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
+
+" Backups
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
 
