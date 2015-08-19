@@ -1,5 +1,5 @@
-#!/bin/bash
-# sourced by .bashrc
+#!/bin/sh
+# sourced by .zshrc
 
 export PAGER=less
 export EDITOR=vim
