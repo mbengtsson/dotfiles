@@ -2,7 +2,7 @@
 # sourced by .bashrc
 
 # enable color support
-alias ls='ls --color'
+alias ls='ls -G'
 
 # some more ls aliases
 alias l.='ls -d .*'
