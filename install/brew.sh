@@ -20,3 +20,4 @@ brew install youtube-dl
 brew install unrar
 brew install p7zip
 brew install git
+brew install zsh

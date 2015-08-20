@@ -10,8 +10,9 @@ export ZSH=$DOTFILES/zsh
 # Source config-files
 for config ($ZSH/**/*.zsh) source $config
 
-# Source git-complete
-for config ($DOTFILES/git/**/*.sh) source $config
+# Source git-completion and git-prompt
+source $DOTFILES/git/git-prompt.sh
+source $DOTFILES/git/git-completion.zsh &>/dev/null
 
 # Init autocomplete
 autoload -U compinit
