@@ -14,4 +14,6 @@ export LESS_TERMCAP_so=$'\E[1;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[1;32m'
 
+export KEYTIMEOUT=1
+
 export ANDROID_HOME=/usr/local/opt/android-sdk

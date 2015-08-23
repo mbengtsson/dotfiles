@@ -19,10 +19,16 @@ function _git_info() {
   fi
 }
 
+function zle-line-init zle-keymap-select {
+    VIM_NORMAL="%{%F{yellow}%} [% NORMAL]% %{$reset_color%}"
+    RPROMPT="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
 PROMPT_HOST='%{%F{yellow}%K{black}%} %n %{%F{black}%}'
 PROMPT_DIR='%{%F{black}%} %~%  '
 PROMPT_SU='%(!.%{%k%F{blue}%K{black}%}%{%F{yellow}%} ⚡ %{%k%F{black}%}.%{%k%F{blue}%})%{%f%k%b%}'
 
 PROMPT='%{%f%b%k%}$PROMPT_HOST$(_git_info)$PROMPT_DIR$PROMPT_SU
 ❯ '
-RPROMPT='%(?.%{%F{green}%}✔.%{%F{red}%}✘)'
+

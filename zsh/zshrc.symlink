@@ -19,15 +19,20 @@ autoload -U compinit
 compinit
 
 # History
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt APPEND_HISTORY
 
 setopt COMPLETE_ALIASES
+
+# Vi mode
+bindkey -v
+zle -N zle-line-init
+zle -N zle-keymap-select
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
