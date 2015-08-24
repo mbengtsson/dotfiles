@@ -1,6 +1,8 @@
 #!/bin/sh
 # sourced by .zshrc
 
+export TERM=xterm-256color
+
 export PAGER=less
 export EDITOR=vim
 
