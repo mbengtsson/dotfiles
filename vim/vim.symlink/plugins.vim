@@ -62,6 +62,9 @@ Plugin 'Yggdroot/indentLine'
 " VIM-ROOTER https://github.com/airblade/vim-rooter
 Plugin 'airblade/vim-rooter'
 
+" VIM-XPATH https://github.com/actionshrimp/vim-xpath
+Plugin 'actionshrimp/vim-xpath'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
