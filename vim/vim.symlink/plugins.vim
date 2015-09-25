@@ -65,6 +65,9 @@ Plugin 'airblade/vim-rooter'
 " VIM-XPATH https://github.com/actionshrimp/vim-xpath
 Plugin 'actionshrimp/vim-xpath'
 
+" VIM-SCALA https://github.com/derekwyatt/vim-scala
+Plugin 'derekwyatt/vim-scala'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
