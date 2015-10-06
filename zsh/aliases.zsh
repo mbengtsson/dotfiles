@@ -19,6 +19,7 @@ alias l='ls -CF ${colorflag}'
 
 alias httpserver='python -m http.server'
 alias vi=vim
+alias vimf='vim --remote-silent'
 alias pgrep='ps -eo "%p %c %U %C" | grep'
 alias nano='nano -m'
 

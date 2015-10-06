@@ -1,4 +1,4 @@
-" load plugins from vundle
+" Load plugins from vundle
 source ~/.vim/plugins.vim                     " Load plugins
 
 set clipboard=unnamed                         " sets clipboard to os default
@@ -23,7 +23,7 @@ set autoindent                                " automatic indentation of new lin
 " UI config
 set number                                    " display line numbers
 set showcmd                                   " show the input of an *incomplete* command
-set wildmenu                                  " show possible completions of command line commands, file names, and more.
+set wildmenu wildmode=full                    " show possible completions of command line commands, file names, and more.
 set title                                     " show file-name in title
 set ruler                                     " display cursor position in status bar
 set laststatus=2                              " show the status line all the time
@@ -33,37 +33,41 @@ set noerrorbells                              " turn off bell
 set ttyfast                                   " faster redrawing
 set lazyredraw                                " redraw only when needed to
 set showmatch                                 " highlight matching [{()}]
+set cpoptions+=$                              " show '$' at end of change
 
 " Searching
 set hlsearch                                  " highlight all search-hits
 set incsearch                                 " incremental searches
 
-"Mappings
-map<C-n> :NERDTreeToggle<CR>
-map<C-u> :GundoToggle<CR>
-map<C-p> :ctrlp_map<CR>
-map'CtrlP' :ctrlp_cmd<CR>
-let mapleader=","     " maps leader to comma (,)
+" Mappings
+let mapleader=","                             " maps leader to comma (,)
+map<leader>n :NERDTreeToggle<CR>
+map<leader>u :GundoToggle<CR>
+map<leader>p :ctrlp_cmd<CR>
 vnoremap . :normal .<cr>
 
-"NERDtree stuff
+" Buffers
+set hidden                                    " buffers can be hidden without first be written
+nnoremap <F5> :buffers<CR>:buffer<Space>
+
+" NERDtree stuff
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif "Close NERDtree if it is the last window
 
-"CtrlP stuff
+" CtrlP stuff
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-"DelimitMate stuff
+" DelimitMate stuff
 let g:delimitMate_expand_cr = 2
 
-"indentLine stuff
+" indentLine stuff
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '│'
 
 " Backups
-:set backup
+set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
