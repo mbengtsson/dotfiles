@@ -7,8 +7,10 @@ brew install git
 brew install gradle
 brew install htop-osx
 brew install isl
+brew install jenv
 brew install kdiff3
 brew install libevent
+brew install libmpc
 brew install libxml2
 brew install lynx
 brew install macvim --override-system-vim
