@@ -12,3 +12,6 @@ Icon
 
 # project-specific vim configurations
 .vimrc.local
+
+# jenv
+.java-version
