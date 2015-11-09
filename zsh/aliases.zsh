@@ -17,7 +17,7 @@ alias ll='ls -alF ${colorflag}'
 alias la='ls -A ${colorflag}'
 alias l='ls -CF ${colorflag}'
 
-alias httpserver='python -m http.server'
+alias httpserver='python -m SimpleHTTPServer 10001'
 alias vi=vim
 alias vimf='vim --remote-silent'
 alias pgrep='ps -eo "%p %c %U %C" | grep'
