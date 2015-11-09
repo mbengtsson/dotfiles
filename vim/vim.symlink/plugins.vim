@@ -68,6 +68,9 @@ Plugin 'actionshrimp/vim-xpath'
 " VIM-SCALA https://github.com/derekwyatt/vim-scala
 Plugin 'derekwyatt/vim-scala'
 
+" TAGLIST.VIM https://github.com/vim-scripts/taglist.vim
+Plugin 'vim-scripts/taglist.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
