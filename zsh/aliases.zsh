@@ -22,9 +22,13 @@ alias vi=vim
 alias vimf='vim --remote-silent'
 alias pgrep='ps -eo "%p %c %U %C" | grep'
 alias nano='nano -m'
+alias emacs='emacs -nw'
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 alias elasticsearch=~/Development/elasticsearch-1.5.2/bin/elasticsearch
+
+alias pushrefs='git push origin HEAD:refs/for/master'
+alias clangf='clang-format-3.7 -i'

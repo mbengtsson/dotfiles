@@ -11,7 +11,7 @@ set scrolloff=3                               " lines of text around cursor
 let g:airline_powerline_fonts = 1
 
 " Fonts and encoding
-set guifont=Inconsolata\ for\ Powerline\ 14   " set font
+set guifont=Inconsolata\ for\ Powerline\ 12   " set font
 set encoding=utf8                             " set encoding to utf8
 
 " Tabs-stop

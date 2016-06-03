@@ -8,10 +8,15 @@
 	trustExitCode = true
 [user]
 	name = Marcus Bengtsson
-	email = marcus.bengtsson@hiq.se
+	email = marcus.bengtsson@cactusrail.se
 [diff]
 	tool = kdiff3
 [difftool]
 	prompt = false
 [merge]
 	tool = kdiff3
+[init]
+	templatedir = ~/.git_template
+[alias]
+	tree = log --oneline --decorate --all --graph
+	pulls = !git pull && git submodule init && git submodule update && git submodule status

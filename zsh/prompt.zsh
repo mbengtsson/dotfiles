@@ -25,7 +25,7 @@ function zle-line-init zle-keymap-select {
     zle reset-prompt
 }
 
-PROMPT_HOST='%{%F{yellow}%K{black}%} %n %{%F{black}%}'
+PROMPT_HOST='%{%F{yellow}%K{black}%} %? %n %{%F{black}%}'
 PROMPT_DIR='%{%F{black}%} %~%  '
 PROMPT_SU='%(!.%{%k%F{blue}%K{black}%}%{%F{yellow}%} ⚡ %{%k%F{black}%}.%{%k%F{blue}%})%{%f%k%b%}'
 
