@@ -16,6 +16,7 @@ source $DOTFILES/git/git-completion.zsh &>/dev/null
 # Init autocomplete
 autoload -U compinit
 compinit
+zstyle ':completion:*' menu select
 
 # History
 HISTFILE=~/.zsh_history
@@ -59,6 +60,9 @@ bindkey '\e[2~' overwrite-mode
 # Rebind the delete key.
 bindkey '\e[3~' delete-char
 
+# Enable reverse search
+bindkey '^R' history-incremental-pattern-search-backward
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -66,3 +70,4 @@ bindkey '\e[3~' delete-char
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
