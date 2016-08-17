@@ -22,6 +22,7 @@ alias vi=vim
 alias vimf='vim --remote-silent'
 alias pgrep='ps -eo "%p %c %U %C" | grep'
 alias nano='nano -m'
+alias emacs='emacs -nw'
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"

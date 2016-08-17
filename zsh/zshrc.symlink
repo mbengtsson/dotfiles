@@ -19,6 +19,7 @@ source $DOTFILES/git/git-completion.zsh &>/dev/null
 # Init autocomplete
 autoload -U compinit
 compinit
+zstyle ':completion:*' menu select
 
 # History
 HISTFILE=~/.zsh_history
@@ -71,3 +72,5 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 eval "$(jenv init -)"
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
