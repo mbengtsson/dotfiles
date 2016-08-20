@@ -11,7 +11,13 @@
 	email = marcus.bengtsson@hiq.se
 [diff]
 	tool = kdiff3
+	guitool = kdiff3
 [difftool]
 	prompt = false
 [merge]
 	tool = kdiff3
+[difftool "kdiff3"]
+	path = /usr/local/bin/kdiff3
+[alias] 
+    tree = log --oneline --decorate --all --graph 
+    pulls = !git pull && git submodule init && git submodule

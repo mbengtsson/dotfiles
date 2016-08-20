@@ -29,3 +29,5 @@ alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 alias elasticsearch=~/Development/elasticsearch-1.5.2/bin/elasticsearch
+
+alias scala="scala -Dscala.color=true"
