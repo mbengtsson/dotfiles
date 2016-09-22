@@ -13,7 +13,7 @@ function _git_info() {
         local color=green
     fi   
     
-    echo "%{%F{$color}%} $(__git_ps1 "%s")"
+    echo "%{%{%F{$color}}  $(__git_ps1 "%s") %{%K{$color}}"
   else
     echo ""
   fi
@@ -24,11 +24,11 @@ function zle-line-init zle-keymap-select {
     RPROMPT="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/} $EPS1"
     zle reset-prompt
 }
-PROMPT_EC='%(?.%{%F{green}%}.%{%F{red}%})%?'
-PROMPT_USER='%{%F{magenta}%}%n '
-PROMPT_DIR='%{%F{blue}%}%~%  '
-PROMPT_SU='%{%f%k%b%}%(!.%{%F{red}%}# %{%k%F{black}%})'
+PROMPT_EC='%{%F{blue}%K{black}%} %?'
+PROMPT_HOST='%{%F{yellow}%K{black}%} %n %{%F{black}%}'
+PROMPT_DIR='%{%F{black}%} %~%  '
+PROMPT_SU='%(!.%{%k%F{blue}%K{black}%}%{%F{yellow}%} ⚡ %{%k%F{black}%}.%{%k%F{blue}%})%{%f%k%b%}'
 
-PROMPT='%{%f%b%k%} $PROMPT_EC  $PROMPT_USER  $PROMPT_DIR  $(_git_info)
-%{%f%k%b%}❯ '
+PROMPT='%{%f%b%k%}$PROMPT_EC$PROMPT_HOST$(_git_info)$PROMPT_DIR$PROMPT_SU
+❯ '
 
