@@ -16,11 +16,6 @@ for config ($ZSH/**/*.zsh) source $config
 source $DOTFILES/git/git-prompt.sh
 source $DOTFILES/git/git-completion.zsh &>/dev/null
 
-# Init autocomplete
-autoload -U compinit
-compinit
-zstyle ':completion:*' menu select
-
 # History
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -30,14 +25,35 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
 setopt HIST_REDUCE_BLANKS
 setopt HIST_IGNORE_SPACE
 setopt HIST_NO_STORE
+setopt HIST_VERIFY
+setopt EXTENDED_HISTORY
 
-setopt COMPLETE_ALIASES
+# Globbing
+setopt GLOBDOTS
+setopt EXTENDEDGLOB
 
-# color code completion
-zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
+
+# CD
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt CDABLE_VARS
+
+# IO
+setopt CORRECT
+
+# Prompting
+setopt PROMPT_SUBST
+
+# Scripts and Functions
+setopt MULTIOS
+
+# zmv
+autoload -U zmv
+alias mmv="noglob zmv"
 
 # Vi mode
 bindkey -v
