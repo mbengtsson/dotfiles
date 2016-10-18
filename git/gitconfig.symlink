@@ -22,3 +22,5 @@
 	pulls = !git pull && git submodule init && git submodule update && git submodule status
 [status]
 	submodulesummary = true
+[push]
+	default = simple

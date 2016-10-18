@@ -71,3 +71,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
+# Override highlighter colors
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=gold
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=gold
