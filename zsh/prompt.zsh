@@ -13,7 +13,7 @@ function _git_info() {
         local color=green
     fi   
     
-    echo "%{%F{$color}%} $(__git_ps1 "%s")"
+    echo "%{%F{$color}%}  $(__git_ps1 "%s")"
   else
     echo ""
   fi
@@ -26,9 +26,9 @@ function zle-line-init zle-keymap-select {
 }
 PROMPT_EC='%(?.%{%F{green}%}.%{%F{red}%})%?'
 PROMPT_USER='%{%F{magenta}%}%n'
-PROMPT_DIR='%{%F{blue}%}%~%  '
+PROMPT_DIR='%{%F{blue}%}%~%'
 PROMPT_SU='%{%f%k%b%}%(!.%{%F{red}%}# %{%k%F{black}%})'
 
-PROMPT='%{%f%b%k%}$PROMPT_EC  $PROMPT_USER  $PROMPT_DIR  $(_git_info)
-%{%f%k%b%}> '
+PROMPT='%{%f%b%k%} $PROMPT_EC  $PROMPT_USER  $PROMPT_DIR  $(_git_info)
+%{%f%k%b%}▸ '
 
