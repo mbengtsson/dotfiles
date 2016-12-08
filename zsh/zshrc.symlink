@@ -79,6 +79,9 @@ bindkey '\e[2~' overwrite-mode
 # Rebind the delete key.
 bindkey '\e[3~' delete-char
 
+# Enable reverse search
+bindkey '^R' history-incremental-pattern-search-backward
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
