@@ -6,9 +6,6 @@
 export DOTFILES=$HOME/.dotfiles
 export ZSH=$DOTFILES/zsh
 
-# Source iTerm shell-integration
-source ~/.iterm2_shell_integration.`basename $SHELL`
-
 # Source config-files
 for config ($ZSH/**/*.zsh) source $config
 

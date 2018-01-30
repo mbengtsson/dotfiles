@@ -4,19 +4,13 @@
 	name = Marcus Bengtsson
 	email = marcus.bengtsson@hiq.se
 [diff]
-  tool = meld
+  tool = kdiff3
 [difftool]
   prompt = false
-[difftool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
 [merge]
-  tool = meld
+  tool = kdiff3
 [mergetool]
   prompt = false
-[mergetool "meld"]
-  trustExitCode = true
-  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
-[alias] 
-    tree = log --oneline --decorate --all --graph 
+[alias]
+    tree = log --oneline --decorate --all --graph
     pulls = !git pull && git submodule init && git submodule

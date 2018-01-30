@@ -18,7 +18,8 @@ alias la='ls -A ${colorflag}'
 alias l='ls -CF ${colorflag}'
 
 alias httpserver='python -m SimpleHTTPServer 10001'
-alias vi=vim
+alias vim=nvim
+alias vi=nvim
 alias vimf='vim --remote-silent'
 alias pgrep='ps -eo "%p %c %U %C" | grep'
 alias nano='nano -m'
@@ -27,7 +28,5 @@ alias emacs='emacs -nw'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
-alias elasticsearch=~/Development/elasticsearch-1.5.2/bin/elasticsearch
 
 alias scala="scala -Dscala.color=true"

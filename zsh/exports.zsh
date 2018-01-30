@@ -20,6 +20,8 @@ export KEYTIMEOUT=1
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export JAVA_HOME=$(/usr/libexec/java_home)
+export SCALA_HOME=/usr/local/opt/scala/idea
 
 export HOMEBREW_GITHUB_API_TOKEN=f209cb9c35c725a43a63e89abf23489b4da3a892
 
+export PATH="/usr/local/sbin:$PATH"
