@@ -1,18 +1,12 @@
 [core]
 	excludesfile = /Users/marcusbengtsson/.gitignore_global
-[difftool "sourcetree"]
-	cmd = /usr/local/Cellar/kdiff3/0.9.98/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /usr/local/Cellar/kdiff3/0.9.98/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
-	trustExitCode = true
 [user]
 	name = Marcus Bengtsson
 	email = marcus.bengtsson@cactusrail.se
 [diff]
-	tool = kdiff3
+  tool = kdiff3
 [difftool]
-	prompt = false
+  prompt = false
 [merge]
 	tool = kdiff3
 [init]
