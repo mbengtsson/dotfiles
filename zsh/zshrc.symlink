@@ -89,4 +89,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 eval "$(jenv init -)"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
+# Override highlighter colors
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=gold
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=gold

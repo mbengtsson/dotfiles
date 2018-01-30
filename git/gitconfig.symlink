@@ -12,5 +12,9 @@
 [mergetool]
   prompt = false
 [alias]
-    tree = log --oneline --decorate --all --graph
-    pulls = !git pull && git submodule init && git submodule
+	tree = log --oneline --decorate --all --graph
+	pulls = !git pull && git submodule init && git submodule update && git submodule status
+[status]
+	submodulesummary = true
+[push]
+	default = simple
