@@ -4,13 +4,13 @@
 	name = Marcus Bengtsson
 	email = marcus.bengtsson@cactusrail.se
 [diff]
-  tool = kdiff3
+	tool = bc3
 [difftool]
   prompt = false
 [merge]
-	tool = kdiff3
+	tool = bc3
 [init]
-	templatedir = ~/.git_template
+	templatedir = /home/vagrant/.git_template
 [alias]
 	tree = log --oneline --decorate --all --graph
 	pulls = !git pull && git submodule init && git submodule update && git submodule status
@@ -18,3 +18,7 @@
 	submodulesummary = true
 [push]
 	default = simple
+[difftool "bc3"]
+	trustExitCode = true
+[mergetool "bc3"]
+	trustExitCode = true
