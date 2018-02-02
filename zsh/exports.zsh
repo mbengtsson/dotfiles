@@ -2,6 +2,7 @@
 # sourced by .zshrc
 
 export TERM=xterm-256color
+export VTE_VERSION="100"
 
 export PAGER=less
 export EDITOR=vim

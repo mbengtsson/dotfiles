@@ -8,7 +8,7 @@ set background=dark                           " Dark background
 colorscheme darkspectrum                      " Colour theme
 syntax on                                     " Syntax highlighting
 set scrolloff=3                               " lines of text around cursor
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
 " Fonts and encoding
 set guifont=Inconsolata\ for\ Powerline:h14   " set font
