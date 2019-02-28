@@ -2,7 +2,7 @@
 	excludesfile = /Users/marcusbengtsson/.gitignore_global
 [user]
 	name = Marcus Bengtsson
-	email = marcus.bengtsson@cactusrail.se
+	email = marcus.bengtsson@elysics.se
 [diff]
 	tool = bc3
 [difftool]
