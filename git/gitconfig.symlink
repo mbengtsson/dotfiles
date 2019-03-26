@@ -10,11 +10,12 @@
 [merge]
 	tool = bc3
 [init]
-	templatedir = /home/vagrant/.git_template
+
 [alias]
 	tree = log --oneline --decorate --all --graph
 	pulls = !git pull && git submodule init && git submodule update && git submodule status
 	psup = !git pull && git submodule update --init --recursive && git submodule status
+    unadd = reset HEAD
 [status]
 	submodulesummary = true
 [push]

@@ -24,10 +24,6 @@ alias pgrep='ps -eo "%p %c %U %C" | grep'
 alias nano='nano -m'
 alias emacs='emacs -nw'
 
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
 alias pushrefs='git push origin HEAD:refs/for/master'
 alias clangf='clang-format-3.7 -i'
 alias scala="scala -Dscala.color=true"

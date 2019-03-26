@@ -86,3 +86,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor)
+
+# Disable "Software Flow Control (XON/XOFF)" so that terminal will not hang on C-s
+stty -ixon
