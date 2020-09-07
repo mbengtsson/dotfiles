@@ -25,5 +25,7 @@ alias nano='nano -m'
 alias emacs='emacs -nw'
 
 alias pushrefs='git push origin HEAD:refs/for/master'
+alias gitclean='git reflog expire --expire=now --all && git gc --prune=now --aggressive'
+
 alias clangf='clang-format-3.7 -i'
 alias scala="scala -Dscala.color=true"
