@@ -15,3 +15,6 @@ Icon
 
 # jenv
 .java-version
+
+# vscode
+.vscode/**
