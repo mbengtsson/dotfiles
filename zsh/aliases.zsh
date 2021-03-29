@@ -28,4 +28,7 @@ alias pushrefs='git push origin HEAD:refs/for/master'
 alias gitclean='git reflog expire --expire=now --all && git gc --prune=now --aggressive'
 
 alias clangf='clang-format-3.7 -i'
-alias scala="scala -Dscala.color=true"
+alias scala='scala -Dscala.color=true'
+
+alias lsser='python -m serial.tools.list_ports -v'
+alias miniterm='miniterm.py --exit-char 3'

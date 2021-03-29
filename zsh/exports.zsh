@@ -20,3 +20,8 @@ export LESS_TERMCAP_us=$'\E[1;32m'
 export KEYTIMEOUT=1
 
 export PATH="/usr/local/sbin:$PATH"
+
+export MINICOM="-c on"
+
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk-0.11.4
